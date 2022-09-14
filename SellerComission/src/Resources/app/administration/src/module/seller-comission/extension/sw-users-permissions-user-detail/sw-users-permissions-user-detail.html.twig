@@ -1,0 +1,12 @@
+{% block sw_settings_user_detail_content_grid %}
+    {% parent %}
+        <sw-card :title="$tc('Sellercomission')">
+        <sw-field
+            type="text"
+            :label="$tc('Sellernumber')"
+            v-if="user && user.customFields !== null"
+            v-model="user.customFields.employeeNumber">
+        >
+        </sw-field>
+    </sw-card>
+{% endblock %}

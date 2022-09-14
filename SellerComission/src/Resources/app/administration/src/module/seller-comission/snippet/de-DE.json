@@ -1,0 +1,12 @@
+{
+    "SellerComission": {
+        "general": {
+            "title": "SellerComission"
+        }
+    },
+    "Sellercomission": {
+        "general": {
+            "descriptionTextModule": "Plugin für Mitarbeiter Provisionsbeteiligung"
+        }
+    }
+}
