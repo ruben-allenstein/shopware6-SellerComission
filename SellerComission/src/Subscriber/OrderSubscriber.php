@@ -67,10 +67,7 @@ class OrderSubscriber implements EventSubscriberInterface
         }
 
         $orderIds = $event->getIds();
-
         $orderId = $orderIds[0];
-
-        /** @var OrderEntity $order */
         $order = $this->orderRepository->search(new Criteria([$orderId]), $event->getContext())->first();
         $data = [
             'id' => $orderId,
