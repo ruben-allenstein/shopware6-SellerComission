@@ -1,5 +1,18 @@
-# SellerComission plugin
+# Shopware 6 SellerComission plugin
 
+| Version    | Changes                                              | Availability   |
+|---------	|-------------------------------------------------------- |----------------|
+| 1.0.0     | Initial release                                       | Github         |
+| 1.0.1     | Fixed redirect resolving within multiple seo urls     | Github         |
+
+# Installation
+
+## Install with composer
+
+* Change to your root Installation of shopware
+* Run command `composer require swag/seller-comission` - install and active plugin with Plugin Manager
+
+## Plugin:
 - This feature is if you want to give your employees a seller comission
 - e.g. When they advise the customers of your shop and make a purchase with his/her administration account for the customer
 
