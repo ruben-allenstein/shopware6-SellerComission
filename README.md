@@ -1,9 +1,9 @@
 # Shopware 6 SellerComission plugin
 
-| Version    | Changes                                              | Availability   |
-|---------	|-------------------------------------------------------- |----------------|
-| 1.0.0     | Initial release                                       | Github         |
-| 1.0.1     | Fixed redirect resolving within multiple seo urls     | Github         |
+| Version | Changes                                              | Availability   |
+|---------|-------------------------------------------------------- |----------------|
+| 1.0.0   | Initial release                                       | Github         |
+| 1.1.0   | Fixed redirect resolving within multiple seo urls     | Github         |
 
 # Installation
 
