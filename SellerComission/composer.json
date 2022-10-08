@@ -1,6 +1,6 @@
 {
     "name": "swag/seller-comission",
-    "version": "0.1.0",
+    "version": "1.0.1",
     "license": "proprietary",
     "description": "If the backend user creates a new backend order he will his employeenumber hands over",
     "type": "shopware-platform-plugin",
