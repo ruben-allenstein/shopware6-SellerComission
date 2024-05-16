@@ -7,7 +7,6 @@ use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\EqualsFilter;
 use Shopware\Core\Framework\Plugin;
 use Shopware\Core\Framework\Plugin\Context\InstallContext;
 use Shopware\Core\Framework\Plugin\Context\UninstallContext;
-use Shopware\Core\System\CustomField\CustomFieldTypes;
 
 class SellerComission extends Plugin
 {
@@ -65,10 +64,7 @@ class SellerComission extends Plugin
 
         $customFieldSets = $customFieldSetRepository->search($customFieldCriteria, $installContext->getContext());
 
-        if ($customFieldSets->count() > 0) {
-            return true;
-        }
-        return false;
+        return $customFieldSets->count() > 0;
     }
 
     public function uninstall(UninstallContext $uninstallContext): void
@@ -77,10 +73,8 @@ class SellerComission extends Plugin
             return;
         }
 
-        // determine Fieldset ID
         $customFieldSetRepository = $this->container->get('custom_field_set.repository');
 
-        // Delete custom field set
         $customFieldCriteria = new Criteria();
         $customFieldCriteria->addFilter(new EqualsFilter('name', self::CUSTOM_FIELD_SET_NAME));
 
