@@ -5,7 +5,7 @@ namespace SellerComission\Subscriber;
 use Psr\Log\LoggerInterface;
 use Shopware\Core\Checkout\Order\OrderEvents;
 use Shopware\Core\Framework\Context;
-use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
+use Shopware\Core\Framework\DataAbstractionLayer\EntityRepository;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityWriteResult;
 use Shopware\Core\Framework\DataAbstractionLayer\Event\EntityWrittenEvent;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
@@ -13,18 +13,11 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class OrderSubscriber implements EventSubscriberInterface
 {
-    protected LoggerInterface $logger;
-    protected EntityRepositoryInterface $orderRepository;
-    protected EntityRepositoryInterface $userRepository;
-
     public function __construct(
-        LoggerInterface $logger,
-        EntityRepositoryInterface $orderRepository,
-        EntityRepositoryInterface $userRepository
+        private readonly LoggerInterface $logger,
+        private readonly EntityRepository $orderRepository,
+        private readonly EntityRepository $userRepository
     ) {
-        $this->logger = $logger;
-        $this->orderRepository = $orderRepository;
-        $this->userRepository = $userRepository;
     }
 
     public static function getSubscribedEvents(): array
