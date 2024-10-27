@@ -4,6 +4,9 @@
     "license": "proprietary",
     "description": "If the backend user creates a new backend order he will his employeenumber hands over",
     "type": "shopware-platform-plugin",
+    "require": {
+        "shopware/core": "^6.6.0"
+    },
     "autoload": {
         "psr-4": {
             "SellerComission\\": "src/"
